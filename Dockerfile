@@ -21,11 +21,11 @@ rm -f /root/README.md
 RUN cd /opt && \
 mkdir /opt/jdk && \
 cd /opt/jdk && \
-wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u73-b02/jdk-8u73-linux-x64.tar.gz && \
+wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u152-b16/aa0333dd3019491ca4f6ddbe78cdb6d0/jdk-8u152-linux-x64.tar.gz && \
 tar -xvzf jdk-*
 
-RUN update-alternatives --install /usr/bin/java java /opt/jdk/jdk1.8.0_73/bin/java 100 && \
-update-alternatives --install /usr/bin/javac javac /opt/jdk/jdk1.8.0_73/bin/javac 100 && \
+RUN update-alternatives --install /usr/bin/java java /opt/jdk/jdk1.8.0_152/bin/java 100 && \
+update-alternatives --install /usr/bin/javac javac /opt/jdk/jdk1.8.0_152/bin/javac 100 && \
 java -version
 
 # Install eclipse
@@ -34,7 +34,8 @@ libswt-gtk-3-jni \
 libswt-gtk-3-java
 
 RUN cd /opt && \
-wget 'https://eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/1/eclipse-java-mars-1-linux-gtk-x86_64.tar.gz&r=1' && \
+#wget 'https://eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/1/eclipse-java-mars-1-linux-gtk-x86_64.tar.gz&r=1' && \
+wget 'https://www.eclipse.org/downloads/download.php?file=/oomph/epp/oxygen/R/eclipse-inst-linux64.tar.gz&r=1' && \
 tar -xvzf download* && \
 rm download*
 
