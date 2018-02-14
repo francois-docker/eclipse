@@ -35,9 +35,10 @@ libswt-gtk-3-java
 
 RUN cd /opt && \
 #wget 'https://eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/1/eclipse-java-mars-1-linux-gtk-x86_64.tar.gz&r=1' && \
-wget 'https://www.eclipse.org/downloads/download.php?file=/oomph/epp/oxygen/R/eclipse-inst-linux64.tar.gz&r=1' && \
-tar -xvzf download* && \
-rm download*
+#wget 'https://www.eclipse.org/downloads/download.php?file=/oomph/epp/oxygen/R/eclipse-inst-linux64.tar.gz&r=1' && \
+wget http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/oxygen/2/eclipse-java-oxygen-2-linux-gtk-x86_64.tar.gz && \
+tar -xvzf eclipse-* && \
+rm eclipse-*
 
 RUN ln -s /opt/eclipse/eclipse /usr/local/bin/eclipse 
 
